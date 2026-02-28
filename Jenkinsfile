@@ -20,7 +20,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 sh 'docker rm -f demo-container || true'
-                sh 'docker run -d -p 8080:8080 --name demo-container demo-app'
+                sh 'docker run -d -p 9090:8080 --name demo-container demo-app'
             }
         }
     }
